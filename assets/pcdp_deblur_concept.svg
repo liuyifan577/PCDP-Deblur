@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-labelledby="title desc">
+  <title id="title">PCDP-Deblur concept diagram</title>
+  <desc id="desc">A conceptual workflow showing high-speed rotational imaging, noisy processing-condition prior information, PCDP-Deblur, and restored tooth-surface output.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbfb"/>
+      <stop offset="1" stop-color="#eef5f2"/>
+    </linearGradient>
+    <linearGradient id="gearGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ced8df"/>
+      <stop offset="1" stop-color="#8fa6b7"/>
+    </linearGradient>
+    <linearGradient id="blurGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b6c9d2" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#577d8e" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#b6c9d2" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="pcdpGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d7eee7"/>
+      <stop offset="1" stop-color="#b6d8ce"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#304c5a"/>
+    </marker>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#23323a" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      text { font-family: "Times New Roman", Times, serif; fill: #1e2d34; }
+      .title { font-size: 24px; font-weight: 700; }
+      .label { font-size: 18px; font-weight: 700; }
+      .small { font-size: 14px; }
+      .tiny { font-size: 12px; fill: #4c5b63; }
+      .card { fill: #ffffff; stroke: #b9c7cc; stroke-width: 1.5; }
+      .soft { fill: #f6f0de; stroke: #d5bd77; stroke-width: 1.4; }
+      .prior { fill: #fff2df; stroke: #d29b4f; stroke-width: 1.5; }
+      .line { stroke: #304c5a; stroke-width: 2.4; fill: none; marker-end: url(#arrow); }
+      .thin { stroke: #6d8791; stroke-width: 1.2; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="520" rx="34" fill="url(#bg)"/>
+
+  <text x="54" y="54" class="title">PCDP-Deblur: Processing-Condition-Guided Restoration for Rotational Inspection</text>
+
+  <g transform="translate(52,104)" filter="url(#softShadow)">
+    <rect class="card" x="0" y="0" width="230" height="320" rx="22"/>
+    <text x="24" y="40" class="label">Rotational Capture</text>
+    <text x="24" y="66" class="small">High-speed involute surface imaging</text>
+    <g transform="translate(58,104)">
+      <circle cx="56" cy="56" r="52" fill="url(#gearGrad)" stroke="#617888" stroke-width="3"/>
+      <circle cx="56" cy="56" r="20" fill="#f9fbfb" stroke="#617888" stroke-width="3"/>
+      <g stroke="#617888" stroke-width="8" stroke-linecap="round">
+        <line x1="56" y1="-8" x2="56" y2="12"/>
+        <line x1="56" y1="100" x2="56" y2="120"/>
+        <line x1="-8" y1="56" x2="12" y2="56"/>
+        <line x1="100" y1="56" x2="120" y2="56"/>
+        <line x1="10" y1="10" x2="24" y2="24"/>
+        <line x1="88" y1="88" x2="102" y2="102"/>
+        <line x1="10" y1="102" x2="24" y2="88"/>
+        <line x1="88" y1="24" x2="102" y2="10"/>
+      </g>
+      <path d="M12,132 C52,158 111,151 139,112" class="thin"/>
+      <path d="M137,112 l-4,18 l-14,-11" fill="#6d8791"/>
+    </g>
+    <g transform="translate(40,246)">
+      <rect x="0" y="0" width="150" height="42" rx="10" fill="#edf4f6" stroke="#b9c7cc"/>
+      <circle cx="22" cy="21" r="10" fill="#4b7383"/>
+      <rect x="42" y="14" width="84" height="14" rx="7" fill="#a9c0ca"/>
+    </g>
+  </g>
+
+  <path class="line" d="M294,264 C338,264 352,264 392,264"/>
+
+  <g transform="translate(398,104)" filter="url(#softShadow)">
+    <rect class="card" x="0" y="0" width="245" height="320" rx="22"/>
+    <text x="24" y="40" class="label">Blurred Image</text>
+    <text x="24" y="66" class="small">Motion blur and weak texture</text>
+    <rect x="42" y="105" width="160" height="160" rx="14" fill="#d9e3e7" stroke="#a5bac2"/>
+    <g opacity="0.92">
+      <path d="M58,146 C93,119 146,123 186,151" stroke="#5e7e8a" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M55,175 C95,151 146,154 190,183" stroke="#6f8c96" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M60,207 C99,186 146,188 184,215" stroke="#7d98a2" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <rect x="44" y="124" width="157" height="102" fill="url(#blurGrad)" opacity="0.48"/>
+      <g stroke="#e4f0f0" stroke-width="2" opacity="0.70">
+        <line x1="64" y1="133" x2="180" y2="133"/>
+        <line x1="58" y1="162" x2="188" y2="162"/>
+        <line x1="57" y1="194" x2="188" y2="194"/>
+      </g>
+    </g>
+    <g transform="translate(32,284)">
+      <rect class="prior" x="0" y="0" width="182" height="28" rx="8"/>
+      <text x="14" y="19" class="tiny">Noisy dynamic conditions</text>
+    </g>
+  </g>
+
+  <path class="line" d="M652,264 C690,264 700,264 730,264"/>
+  <path class="line" d="M520,430 C586,478 710,478 765,395"/>
+
+  <g transform="translate(738,82)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="270" height="360" rx="26" fill="url(#pcdpGrad)" stroke="#77a99b" stroke-width="2"/>
+    <text x="32" y="46" class="label">PCDP-Deblur</text>
+    <text x="32" y="72" class="small">Lightweight condition-aware restoration</text>
+    <g transform="translate(32,106)">
+      <rect class="card" x="0" y="0" width="206" height="54" rx="12"/>
+      <text x="18" y="23" class="small">ILDFA Backbone</text>
+      <text x="18" y="42" class="tiny">row-oriented restoration</text>
+    </g>
+    <g transform="translate(32,178)">
+      <rect class="prior" x="0" y="0" width="206" height="54" rx="12"/>
+      <text x="18" y="23" class="small">PCPIM</text>
+      <text x="18" y="42" class="tiny">processing-condition prior injection</text>
+    </g>
+    <g transform="translate(32,250)">
+      <rect class="soft" x="0" y="0" width="206" height="54" rx="12"/>
+      <text x="18" y="23" class="small">HBF-PSNRLoss</text>
+      <text x="18" y="42" class="tiny">horizontal-biased supervision</text>
+    </g>
+    <path d="M238,133 C253,154 253,207 238,226" class="thin"/>
+    <path d="M238,277 C254,258 254,219 238,206" class="thin"/>
+  </g>
+
+  <path class="line" d="M1018,264 C1056,264 1068,264 1100,264"/>
+
+  <g transform="translate(1104,104)" filter="url(#softShadow)">
+    <rect class="card" x="0" y="0" width="150" height="320" rx="22"/>
+    <text x="24" y="40" class="label">Restored</text>
+    <text x="24" y="66" class="small">Clearer surface details</text>
+    <rect x="25" y="106" width="100" height="160" rx="14" fill="#eff6f4" stroke="#9cb9b0"/>
+    <g stroke-linecap="round" fill="none">
+      <path d="M36,143 C58,124 92,125 116,146" stroke="#4f746d" stroke-width="4"/>
+      <path d="M35,175 C61,154 91,154 116,178" stroke="#5c8279" stroke-width="3.4"/>
+      <path d="M37,208 C62,190 90,190 114,212" stroke="#6b9188" stroke-width="3"/>
+      <path d="M50,231 L107,221" stroke="#a06a51" stroke-width="2"/>
+      <path d="M43,120 L114,120" stroke="#d7e7e2" stroke-width="1.8"/>
+      <path d="M43,248 L114,248" stroke="#d7e7e2" stroke-width="1.8"/>
+    </g>
+    <g transform="translate(21,284)">
+      <rect x="0" y="0" width="108" height="28" rx="8" fill="#edf7f0" stroke="#99bea8"/>
+      <text x="15" y="19" class="tiny">Inspection-ready</text>
+    </g>
+  </g>
+</svg>
