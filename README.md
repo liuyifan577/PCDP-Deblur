@@ -2,11 +2,9 @@
 
 **Processing-Condition Degradation Prior-Guided Deblurring for High-Speed Rotational Imaging of Involute Surfaces**
 
-This repository is the official resource page for the research project on processing-condition-guided deblurring of high-speed rotational images of involute metallic surfaces.
+This repository currently serves as a pre-release project page for the research project on processing-condition-guided deblurring of high-speed rotational images of involute metallic surfaces.
 
 > Code, trained models, and dataset access will be released after the paper is accepted.
-
-![PCDP-Deblur Concept](assets/pcdp_deblur_concept.svg)
 
 ## What This Project Addresses
 
@@ -16,13 +14,13 @@ PCDP-Deblur is designed to restore such images by combining visual restoration w
 
 ## Method Overview
 
-PCDP-Deblur consists of three cooperating parts:
+The method studies three cooperating design elements:
 
 - **ILDFA**: an involute-surface lightweight direction-factorized architecture for row-oriented feature extraction, directional feature decoupling, and horizontal output correction.
 - **PCPIM**: a processing-condition prior injection module that converts a blur-intensity prior into bounded, image-conditioned, stage-aware restoration guidance.
-- **HBF-PSNRLoss**: a horizontal-biased frequency PSNR loss that complements spatial reconstruction supervision with frequency-domain emphasis on horizontal degradation patterns.
+- **HBF-PSNRLoss**: a training objective that complements spatial reconstruction supervision with frequency-domain emphasis on horizontal degradation patterns.
 
-Together, these components form a lightweight restoration framework for high-speed rotational inspection images under noisy dynamic processing conditions.
+Together, ILDFA and PCPIM form the restoration network, while HBF-PSNRLoss is used during training to encourage recovery of horizontal degradation patterns.
 
 ## Planned Release
 
@@ -32,14 +30,14 @@ The repository is currently a pre-release resource page. After paper acceptance,
 - Configuration files for reproduction.
 - Trained model checkpoints.
 - Evaluation scripts for PSNR, SSIM, and inference time.
-- Dataset access instructions with a Google Drive link.
+- Dataset access instructions through the final release link.
 - Dataset split files and metadata format documentation.
 
-No code, checkpoints, or dataset files are included in this repository before the formal release.
+No runnable code, checkpoints, or dataset files are included in this repository before the formal release.
 
 ## Dataset Access
 
-The dataset will be distributed through a Google Drive link after the paper is accepted. The released documentation will include the image-pair organization, processing-condition prior format, and train/test split information.
+Dataset access will be provided after the paper is accepted. The released documentation will include the image-pair organization, processing-condition prior format, and train/test split information.
 
 ## Citation
 
