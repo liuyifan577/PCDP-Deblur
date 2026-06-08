@@ -1,4 +1,4 @@
-﻿# PCDP-Deblur
+﻿# PCDP-Net
 
 **Processing-Condition Prior-Guided Restoration of Motion-Degraded Gear Surface in High-Speed Rotational Imaging**
 
