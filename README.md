@@ -1,8 +1,8 @@
 ﻿# PCDP-Deblur
 
-**Processing-Condition Degradation Prior-Guided Deblurring for High-Speed Rotational Imaging of Involute Surfaces**
+**Processing-Condition Prior-Guided Restoration of Motion-Degraded Gear Surface in High-Speed Rotational Imaging**
 
-This repository currently serves as a pre-release project page for the research project on processing-condition-guided deblurring of high-speed rotational images of involute metallic surfaces.
+This repository currently serves as a pre-release project page for the processing-condition degradation prior-guided restoration method for degraded gear-surface images acquired under high-speed rotation.
 
 > Code, trained models, and dataset access will be released after the paper is accepted.
 
